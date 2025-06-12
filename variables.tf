@@ -1,14 +1,10 @@
+variable "cluster_name" {
+  description = "EKS cluster name"
+  type        = string
+}
+
 variable "kubernetes_version" {
-  default     = 1.32
-  description = "kubernetes version"
+  description = "Kubernetes version for the EKS cluster"
+  type        = string
+  default     = "1.32"
 }
-
-variable "vpc_cidr" {
-  default     = "10.0.0.0/16"
-  description = "default CIDR range of the VPC"
-}
-variable "aws_region" {
-  default = "ap-south-1"
-  description = "aws region"
-}
-
